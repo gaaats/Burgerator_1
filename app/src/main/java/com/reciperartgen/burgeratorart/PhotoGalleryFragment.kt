@@ -74,7 +74,6 @@ class PhotoGalleryFragment : Fragment() {
             R.drawable.tvo,
             R.drawable.three,
             R.drawable.four,
-            R.drawable.five,
             R.drawable.six,
             R.drawable.seven,
         )

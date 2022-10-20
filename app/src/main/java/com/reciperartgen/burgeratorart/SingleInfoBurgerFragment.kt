@@ -6,11 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
 import com.reciperartgen.burgeratorart.databinding.FragmentSingleInfoBurgerBinding
-import com.reciperartgen.burgeratorart.databinding.FragmentVhyItIsGoogBinding
 
 class SingleInfoBurgerFragment : Fragment() {
+
+    private val args: SingleInfoBurgerFragmentArgs by navArgs()
+
     private var _binding: FragmentSingleInfoBurgerBinding? = null
     private val binding get() = _binding ?: throw RuntimeException("FragmentStartBinding = null")
 
@@ -24,9 +27,16 @@ class SingleInfoBurgerFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         try {
-//            binding.btnImgExit.setOnClickListener {
-//                initAlertDialogExit()
-//            }
+            val recipe = args.singleRecipeSend
+            binding.tvTitleRecipe.text = recipe._title
+            binding.tvRecipeIngridients.text = recipe._ingredients
+            binding.tvRecipeInstructions.text = recipe._instructions
+            initAllBtnsOnScreen()
+            super.onViewCreated(view, savedInstanceState)
+
+            binding.btnImgExit.setOnClickListener {
+                initAlertDialogExit()
+            }
 
 
         } catch (e: Exception) {
@@ -57,5 +67,18 @@ class SingleInfoBurgerFragment : Fragment() {
             .setCancelable(true)
             .create()
             .show()
+    }
+
+    private fun initAllBtnsOnScreen() {
+        binding.btnImgExit.setOnClickListener {
+            goBackPressed()
+        }
+        binding.btnOk.setOnClickListener {
+            goBackPressed()
+        }
+    }
+
+    private fun goBackPressed() {
+        requireActivity().onBackPressed()
     }
 }
