@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="main_colour_">#F4F880</color>
+    <color name="colour_almost_main">#F2A60A</color>
+
+    <color name="add_colour_the_most_dark">#492F03</color>
+    <color name="add_colour_for_stroke_btn">#231702</color>
+
+    <color name="colour_brighter_then_the_most_dark">#961B06</color>
+
+    <color name="add_colour_not_like_main_1">#E6D356</color>
+    <color name="add_colour_not_like_main_2">#C6A705</color>
+
+
+    <color name="main_colour_black">#131410</color>
+
+    <color name="prog_bar_grey">#4C4848</color>
+    <color name="prog_bar_end_colour">#F81313</color>
+    <color name="red">#8A0505</color>
+    <color name="prog_bar_start_colour">#FF4C00</color>
+
+    <color name="add_colour_3_text_btn">#F2F2EF</color>
+</resources>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.reciperartgen.burgeratorart.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_settingsFragment"
+            app:enterAnim="@anim/from_rightttt"
+            app:exitAnim="@anim/to_leftttttt"
+            app:popEnterAnim="@anim/from_leftttt"
+            app:popExitAnim="@anim/to_righttttt"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_chooseBurderFragment"
+            app:enterAnim="@anim/from_rightttt"
+            app:exitAnim="@anim/to_leftttttt"
+            app:popEnterAnim="@anim/from_leftttt"
+            app:popExitAnim="@anim/to_righttttt"
+            app:destination="@id/chooseBurderFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_likedBurgersFragment"
+            app:enterAnim="@anim/from_rightttt"
+            app:exitAnim="@anim/to_leftttttt"
+            app:popEnterAnim="@anim/from_leftttt"
+            app:popExitAnim="@anim/to_righttttt"
+            app:destination="@id/likedBurgersFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_aboutEverythingFragment"
+            app:enterAnim="@anim/from_rightttt"
+            app:exitAnim="@anim/to_leftttttt"
+            app:popEnterAnim="@anim/from_leftttt"
+            app:popExitAnim="@anim/to_righttttt"
+            app:destination="@id/aboutEverythingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.reciperartgen.burgeratorart.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/chooseBurderFragment"
+        android:name="com.reciperartgen.burgeratorart.ChooseBurderFragment"
+        android:label="fragment_choose_burder"
+        tools:layout="@layout/fragment_choose_burder" >
+        <action
+            android:id="@+id/action_chooseBurderFragment_to_randomBurgerFragment"
+            app:enterAnim="@anim/from_rightttt"
+            app:exitAnim="@anim/to_leftttttt"
+            app:popEnterAnim="@anim/from_leftttt"
+            app:popExitAnim="@anim/to_righttttt"
+            app:destination="@id/randomBurgerFragment" />
+        <action
+            android:id="@+id/action_chooseBurderFragment_to_listBurgersFragment"
+            app:enterAnim="@anim/from_rightttt"
+            app:exitAnim="@anim/to_leftttttt"
+            app:popEnterAnim="@anim/from_leftttt"
+            app:popExitAnim="@anim/to_righttttt"
+            app:destination="@id/listBurgersFragment" />
+        <action
+            android:id="@+id/action_chooseBurderFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_chooseBurderFragment_to_likedBurgersFragment"
+            app:destination="@id/likedBurgersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/randomBurgerFragment"
+        android:name="com.reciperartgen.burgeratorart.RandomBurgerFragment"
+        android:label="fragment_random_burger"
+        tools:layout="@layout/fragment_random_burger" />
+    <fragment
+        android:id="@+id/listBurgersFragment"
+        android:name="com.reciperartgen.burgeratorart.ListBurgersFragment"
+        android:label="fragment_list_burgers"
+        tools:layout="@layout/fragment_list_burgers" >
+        <action
+            android:id="@+id/action_listBurgersFragment_to_singleInfoBurgerFragment"
+            app:enterAnim="@anim/from_rightttt"
+            app:exitAnim="@anim/to_leftttttt"
+            app:popEnterAnim="@anim/from_leftttt"
+            app:popExitAnim="@anim/to_righttttt"
+            app:destination="@id/singleInfoBurgerFragment" />
+        <action
+            android:id="@+id/action_listBurgersFragment_to_likedBurgersFragment"
+            app:enterAnim="@anim/from_rightttt"
+            app:exitAnim="@anim/to_leftttttt"
+            app:popEnterAnim="@anim/from_leftttt"
+            app:popExitAnim="@anim/to_righttttt"
+            app:destination="@id/likedBurgersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleInfoBurgerFragment"
+        android:name="com.reciperartgen.burgeratorart.SingleInfoBurgerFragment"
+        android:label="fragment_single_info_burger"
+        tools:layout="@layout/fragment_single_info_burger" >
+        <argument
+            android:name="single_recipe_send"
+            app:argType="com.reciperartgen.burgeratorart.entitys.ResponseApiSingleRecipe" />
+    </fragment>
+    <fragment
+        android:id="@+id/likedBurgersFragment"
+        android:name="com.reciperartgen.burgeratorart.LikedBurgersFragment"
+        android:label="fragment_liked_burgers"
+        tools:layout="@layout/fragment_liked_burgers" />
+    <fragment
+        android:id="@+id/aboutEverythingFragment"
+        android:name="com.reciperartgen.burgeratorart.AboutEverythingFragment"
+        android:label="fragment_about_everything"
+        tools:layout="@layout/fragment_about_everything" >
+        <action
+            android:id="@+id/action_aboutEverythingFragment_to_vhyItIsGoogFragment"
+            app:enterAnim="@anim/from_rightttt"
+            app:exitAnim="@anim/to_leftttttt"
+            app:popEnterAnim="@anim/from_leftttt"
+            app:popExitAnim="@anim/to_righttttt"
+            app:destination="@id/vhyItIsGoogFragment" />
+        <action
+            android:id="@+id/action_aboutEverythingFragment_to_nativeCountryFragment"
+            app:enterAnim="@anim/from_rightttt"
+            app:exitAnim="@anim/to_leftttttt"
+            app:popEnterAnim="@anim/from_leftttt"
+            app:popExitAnim="@anim/to_righttttt"
+            app:destination="@id/nativeCountryFragment" />
+        <action
+            android:id="@+id/action_aboutEverythingFragment_to_firstTimeCreatedFragment"
+            app:enterAnim="@anim/from_rightttt"
+            app:exitAnim="@anim/to_leftttttt"
+            app:popEnterAnim="@anim/from_leftttt"
+            app:popExitAnim="@anim/to_righttttt"
+            app:destination="@id/firstTimeCreatedFragment" />
+        <action
+            android:id="@+id/action_aboutEverythingFragment_to_otherFactsFragment"
+            app:enterAnim="@anim/from_rightttt"
+            app:exitAnim="@anim/to_leftttttt"
+            app:popEnterAnim="@anim/from_leftttt"
+            app:popExitAnim="@anim/to_righttttt"
+            app:destination="@id/otherFactsFragment" />
+        <action
+            android:id="@+id/action_aboutEverythingFragment_to_aboutAppFragment"
+            app:enterAnim="@anim/from_rightttt"
+            app:exitAnim="@anim/to_leftttttt"
+            app:popEnterAnim="@anim/from_leftttt"
+            app:popExitAnim="@anim/to_righttttt"
+            app:destination="@id/aboutAppFragment" />
+        <action
+            android:id="@+id/action_aboutEverythingFragment_to_photoGalleryFragment"
+            app:enterAnim="@anim/from_rightttt"
+            app:exitAnim="@anim/to_leftttttt"
+            app:popEnterAnim="@anim/from_leftttt"
+            app:popExitAnim="@anim/to_righttttt"
+            app:destination="@id/photoGalleryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vhyItIsGoogFragment"
+        android:name="com.reciperartgen.burgeratorart.VhyItIsGoogFragment"
+        android:label="fragment_vhy_it_is_goog"
+        tools:layout="@layout/fragment_vhy_it_is_goog" />
+    <fragment
+        android:id="@+id/nativeCountryFragment"
+        android:name="com.reciperartgen.burgeratorart.NativeCountryFragment"
+        android:label="fragment_native_country"
+        tools:layout="@layout/fragment_native_country" />
+    <fragment
+        android:id="@+id/firstTimeCreatedFragment"
+        android:name="com.reciperartgen.burgeratorart.FirstTimeCreatedFragment"
+        android:label="fragment_first_time_created"
+        tools:layout="@layout/fragment_first_time_created" />
+    <fragment
+        android:id="@+id/otherFactsFragment"
+        android:name="com.reciperartgen.burgeratorart.OtherFactsFragment"
+        android:label="fragment_other_facts"
+        tools:layout="@layout/fragment_other_facts" />
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.reciperartgen.burgeratorart.AboutAppFragment"
+        android:label="fragment_about_app"
+        tools:layout="@layout/fragment_about_app" />
+    <fragment
+        android:id="@+id/photoGalleryFragment"
+        android:name="com.reciperartgen.burgeratorart.PhotoGalleryFragment"
+        android:label="fragment_photo_gallery"
+        tools:layout="@layout/fragment_photo_gallery" />
+</navigation>
